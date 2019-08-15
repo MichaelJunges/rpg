@@ -35,8 +35,8 @@ public class Atividade {
         System.out.println("Conta selecionada: " + pessoa);
         System.out.println("Valor da transferência: R$");
         double transferencia = teclado.nextDouble();
-        double valor = 0.0;
-        
+        double valor;
+        System.out.println("---------------");
         if (pessoa == 1){
             if(transferencia <= conta2.getValorConta()){
                 valor = conta1.getValorConta();
