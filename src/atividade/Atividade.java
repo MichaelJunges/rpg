@@ -18,6 +18,7 @@ public class Atividade {
         conta1.setCidade("Capitão");
         conta1.setTelefone("(51)99599-9999");
         conta1.setValorConta(500.00);
+        conta1.setChequeEspecial(1000.00);
 
         System.out.println(conta1); 
 
@@ -26,6 +27,7 @@ public class Atividade {
         conta2.setCidade("Lajeado");
         conta2.setTelefone("(51)99999-9999");
         conta2.setValorConta(1000.00);
+        conta2.setChequeEspecial(300.00);
 
         System.out.println(conta2);
         
@@ -34,32 +36,20 @@ public class Atividade {
         int pessoa = teclado.nextInt();
         System.out.println("Conta selecionada: " + pessoa);
         System.out.println("Valor da transferência: R$");
-        double transferencia = teclado.nextDouble();
-        double valor;
+        double valorTransferencia = teclado.nextDouble();
         System.out.println("---------------");
         if (pessoa == 1){
-            if(transferencia <= conta2.getValorConta()){
-                valor = conta1.getValorConta();
-                conta1.setValorConta(valor + transferencia);
-                valor = conta2.getValorConta();
-                conta2.setValorConta(valor - transferencia);
-            }else {
-                System.out.println("Saldo insuficiente");
+            if(conta2.credito(valorTransferencia)){
+            conta1.debito(valorTransferencia);
             }
         }
         if(pessoa == 2){
-            if(transferencia <= conta1.getValorConta()){
-                valor = conta2.getValorConta();
-                conta2.setValorConta(valor + transferencia);
-                valor = conta1.getValorConta();
-                conta1.setValorConta(valor - transferencia);
-            }else {
-                System.out.println("Saldo insuficiente");
+            if(conta1.credito(valorTransferencia)){
+            conta2.debito(valorTransferencia);
             }
         }
         System.out.println("Saldo Atualizado:");
         System.out.println(conta1);
         System.out.println(conta2);
     }
-    
 }
