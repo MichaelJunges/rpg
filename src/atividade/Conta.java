@@ -58,20 +58,24 @@ public class Conta {
     public void setChequeEspecial(double chequeEspecial) {
         this.chequeEspecial = chequeEspecial;
     }
-
-    public boolean credito(double valorTransferencia){
-        if(valorTransferencia <= valorConta + chequeEspecial){
-            this.valorConta -= valorTransferencia;
+    
+    public boolean credito(double valorTransferencia) {
+        if (valorTransferencia == 0){
+            System.out.println("Digite um valor!");
+            return false;
+        }
+        if (valorTransferencia <= valorConta + chequeEspecial) {
+            valorConta -= valorTransferencia;
             System.out.println("Transferência realizada.");
             return true;
-        }else{
+        } else {
             System.out.println("Transferência não realizada.");
             return false;
         }
     }
-    
-    public void debito(double valor){
-        this.valorConta += valor;
+
+    public void debito(double valor) {
+        valorConta += valor;
     }
     
     @Override
