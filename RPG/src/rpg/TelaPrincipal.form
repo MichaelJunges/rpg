@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LblNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblVida" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblAtaque" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LblAtaquePerso" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblNomePerso" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblVidaPerso" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="116" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LblAtaque2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="LblVida2" min="-2" max="-2" attributes="0"/>
+                          <Component id="LblNome2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LblNomeIni" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblVidaIni" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblAtaqueIni" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+              <Component id="BtnAtacar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LblNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblNome2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblNomePerso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblNomeIni" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LblVida" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblVida2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblVidaPerso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblVidaIni" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LblAtaque" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblAtaque2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblAtaquePerso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblAtaqueIni" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BtnAtacar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="BtnAtacar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atacar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnAtacarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblNome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Personagem:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblVida">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Vida:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblAtaque">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ataque:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblNome2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Inimigo:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblVida2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Vida:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblAtaque2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ataque:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblNomePerso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="..."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblVidaPerso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="..."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblAtaquePerso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="..."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblNomeIni">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="..."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblVidaIni">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="..."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LblAtaqueIni">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="..."/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
