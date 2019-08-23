@@ -5,6 +5,9 @@
  */
 package rpg;
 
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author michael.junges
@@ -16,27 +19,68 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     Personagem personagem1;
     Inimigo inimigo1;
-    
+    String[] inimigos = {"Tiamat", "Inimigo2", "Inimigo Final"};
+    int contInimigo = 0;
+    Random gerador;
+
     public TelaPrincipal() {
         initComponents();
         personagem1 = new Personagem();
         inimigo1 = new Inimigo();
+        gerador = new Random();
         
         personagem1.setNome("Draconato");
         personagem1.setVida(1000);
-        personagem1.setAtaque(100);
-        
+        personagem1.setAtaque(200);
+        exibirPersonagem();
+
         inimigo1.setNome("Tiamat");
-        inimigo1.setVida(6000);
+        inimigo1.setVida(600);
         inimigo1.setAtaque(2000);
-        
+        exibirInimigo();
+    }
+
+    private void exibirPersonagem() {
         LblNomePerso.setText(personagem1.getNome());
         LblVidaPerso.setText(String.valueOf(personagem1.getVida()));
         LblAtaquePerso.setText(String.valueOf(personagem1.getAtaque()));
+    }
 
+    private void exibirInimigo() {
         LblNomeIni.setText(inimigo1.getNome());
         LblVidaIni.setText(String.valueOf(inimigo1.getVida()));
         LblAtaqueIni.setText(String.valueOf(inimigo1.getAtaque()));
+    }
+
+    private void gerarInimigo() {
+        inimigo1 = new Inimigo();
+        inimigo1.setNome(inimigos[contInimigo]);
+        inimigo1.setVida(gerador.nextInt(200) + 10);
+        inimigo1.setAtaque(gerador.nextInt(35) + 1);
+
+        if (contInimigo < inimigos.length) {
+            contInimigo += 1;
+        } else {
+            contInimigo = 0;
+            gerarInimigo();
+        }
+    }
+    
+    private void ataque(){
+        int ataque = personagem1.getAtaque();
+        int vida = inimigo1.getVida();
+        int valorDado = gerador.nextInt(5)+1;
+        if(valorDado == 1 || valorDado ==2 ){
+        }else if(valorDado == 3){
+            inimigo1.setVida(inimigo1.getVida() - ataque);
+        } else if(valorDado == 4){
+            ataque = personagem1.getAtaque() /3;
+        } else{
+            
+        }
+        JOptionPane.showMessageDialog(this,"Valor Dado: " + valorDado + "Dano: " + ataque);
+        int vidaRestante = inimigo1.getVida()- ataque;
+        inimigo1.setVida(vidaRestante);
     }
 
     /**
@@ -159,8 +203,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnAtacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAtacarActionPerformed
-        
-        
+        ataque();
+        if (inimigo1.getVida() <= 0) {
+            gerarInimigo();
+            JOptionPane.showMessageDialog(this, "Inimigo Morto");
+        }
+        exibirInimigo();
     }//GEN-LAST:event_BtnAtacarActionPerformed
 
     /**

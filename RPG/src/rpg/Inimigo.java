@@ -3,9 +3,9 @@ package rpg;
 // autor: Michael Junges
 
 public class Inimigo {
-    String nome;
-    int vida;
-    int ataque;
+    private String nome;
+    private int vida;
+    private int ataque;
 
     public String getNome() {
         return nome;
@@ -30,6 +30,5 @@ public class Inimigo {
     public void setAtaque(int ataque) {
         this.ataque = ataque;
     }
-    
     
 }

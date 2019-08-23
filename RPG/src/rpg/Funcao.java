@@ -1,13 +1,11 @@
 package rpg;
 import java.util.Random;
+
 // autor: Michael Junges
 
 public class Funcao {
     int gerador;
-    
    
-    public int atacar(){
-        return 1;
-    }
+ 
 }
 
